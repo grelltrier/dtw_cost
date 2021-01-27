@@ -4,7 +4,13 @@ version = "0.1.0"
 authors = ["pentamassiv <pentamassiv@posteo.de>"]
 edition = "2018"
 
+[features]
+# The default set of optional packages
+default = []
+ndarrays = ["ndarray", "ndarray-stats", "num-traits"]
+
+
 [dependencies]
-ndarray= "0.13"
-ndarray-stats = "0.3"
-num-traits ="0.2"
+ndarray= { version = "0.13", optional = true }
+ndarray-stats = { version = "0.3", optional = true }
+num-traits = { version = "0.2", optional = true }
