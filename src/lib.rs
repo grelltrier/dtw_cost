@@ -28,9 +28,9 @@ where
     f64::sqrt(sq_l2_dist_ndarray(a, b))
 }
 
-// Calculate the SQUARED L2 distance (euclidian distance) between Vec
+// Calculate the SQUARED L2 distance (euclidian distance) between two Vec
 // The two Vec MUST be of the same length
-pub fn sq_l2_dist_vec<T1, T2>(x: Vec<T1>, y: Vec<T1>) -> f64
+pub fn sq_l2_dist_vec<T1, T2>(x: &Vec<T1>, y: &Vec<T1>) -> f64
 where
     T1: std::ops::Sub<Output = T2> + Copy,
     T2: std::ops::Mul<Output = f64>,
@@ -42,9 +42,9 @@ where
     dist
 }
 
-// Calculate the L2 distance (euclidian distance) between Vec
+// Calculate the L2 distance (euclidian distance) between two Vec
 // The two Vec MUST be of the same length
-pub fn l2_dist_vec<T1, T2>(x: Vec<T1>, y: Vec<T1>) -> f64
+pub fn l2_dist_vec<T1, T2>(x: &Vec<T1>, y: &Vec<T1>) -> f64
 where
     T1: std::ops::Sub<Output = T2> + Copy,
     T2: std::ops::Mul<Output = f64>,
