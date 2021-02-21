@@ -30,6 +30,11 @@ pub fn sq_l2_dist_f64(x: &f64, y: &f64) -> f64 {
     (x - y).powi(2)
 }
 
+// Calculate the L2 distance (euclidian distance) for f64
+pub fn sq_l2_dist_tuple_f64(x: &(f64, f64), y: &(f64, f64)) -> f64 {
+    (x.0 - y.0).powi(2) + (x.1 - y.1).powi(2)
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
